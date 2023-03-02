@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/second-page', [\App\Http\Controllers\MainController::class, 'secondPage'])->name('secondPage');
+
+Route::post('/send-form', [\App\Http\Controllers\MainController::class, 'sendForm'])->name('sendForm');
